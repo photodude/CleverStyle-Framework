@@ -74,7 +74,7 @@ script:
   - |
     if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then
       # hhvm phpt-tests-runner tests/quick
-      hhvm --php -d variables_order=EGPCS phpt-tests-runner test
+      hhvm -d variables_order=EGPCS phpt-tests-runner test
     else
       php -d variables_order=EGPCS phpt-tests-runner tests
     fi
